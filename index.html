@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolyn Chang | Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">Carolyn Chang</h1>
+            <nav>
+                <ul class="nav-tabs">
+                    <li><a href="#about" class="tab-link active" data-tab="about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills" class="tab-link" data-tab="skills"><i class="fas fa-layer-group"></i> Skills</a></li>
+                    <li><a href="#projects" class="tab-link" data-tab="projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                    <li><a href="#contact" class="tab-link" data-tab="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+
+        <!-- Interactive Hero / Personal Statement -->
+        <section id="about" class="tab-content active">
+            <div class="hero-card">
+                <div class="hero-avatar">
+                    <img src="CarolynChang.Headshot.jpg" alt="Carolyn Chang Headshot" class="headshot-img">
+                    <span class="status-badge"><i class="fas fa-graduation-cap"></i> Rutgers '29</span>
+                </div>
+                <div class="hero-body">
+                    <h2>Hello, I'm Carolyn</h2>
+                    <!-- Rubric Requirement: Clear one-sentence Personal Statement -->
+                    <p class="personal-statement">
+                        I am majoring in Finance at Rutgers Business School-NB's and Honors College, expected to graduate in May 2029, and seeking a career in Sales & Trading that upholds my values of teamwork and culture[cite: 2].
+                    </p>
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">3.7</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">200+</span>
+                            <span class="stat-label">Event Attendees</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">60+</span>
+                            <span class="stat-label">Fraternity Members</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="https://www.linkedin.com/in/cchang1430" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <button class="btn btn-secondary" id="triggerContactModal">
+                            <i class="fas fa-paper-plane"></i> Quick Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Skills Showcase -->
+        <section id="skills" class="tab-content">
+            <div class="section-header">
+                <h2>Skills & Competencies</h2>
+                <p>Select a category to filter skills:</p>
+            </div>
+
+            <div class="chip-container">
+                <button class="chip-btn active" data-skill-filter="all">All Skills</button>
+                <button class="chip-btn" data-skill-filter="soft">Interpersonal</button>
+                <button class="chip-btn" data-skill-filter="tech">Technical & Academic</button>
+            </div>
+
+            <div class="interactive-skills-grid">
+                
+                <div class="interactive-card" data-category="soft">
+                    <div class="card-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Strong Communication</h3>
+                    <p>Delivering personalized advising to customer cohorts and engaging 200+ event attendees to promote Cantonese culture[cite: 2].</p>
+                </div>
+
+                <div class="interactive-card" data-category="soft">
+                    <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Event Planning</h3>
+                    <p>Orchestrating large-scale cultural programming, bi-weekly meetings, and collaborative recruitment series[cite: 2].</p>
+                </div>
+
+                <div class="interactive-card" data-category="soft">
+                    <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>Organization & Execution</h3>
+                    <p>Managing operational schedules, reservations, and facilities at the Hatchery Innovation Studio for 20+ daily user groups[cite: 2].</p>
+                </div>
+
+                <div class="interactive-card" data-category="soft">
+                    <div class="card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Time Management</h3>
+                    <p>Maintaining a 3.7 GPA while balancing executive board duties across multiple campus organizations[cite: 2].</p>
+                </div>
+
+                <div class="interactive-card" data-category="tech">
+                    <div class="card-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>Microsoft Excel (Certified)</h3>
+                    <p>Financial accounting, business analytics, data tracking, and spreadsheet optimization[cite: 2].</p>
+                </div>
+
+                <div class="interactive-card" data-category="tech">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Design & Software Tools</h3>
+                    <p>Canva, Google Suite, and Microsoft Office Suite for professional presentation and communications[cite: 2].</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Projects Accordion -->
+        <section id="projects" class="tab-content">
+            <div class="section-header">
+                <h2>Projects & Leadership</h2>
+                <p>Click on any project card to expand details:</p>
+            </div>
+
+            <div class="accordion-container">
+
+                <!-- Project 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-cookie-bite title-icon"></i>
+                            <div>
+                                <h3>HKSA Bake Sale Fundraiser</h3>
+                                <span class="tag">Hong Kong Student Association</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Planned and executed a campus bake sale fundraiser to generate funding for cultural events and promote Cantonese heritage across Rutgers University[cite: 2].</p>
+                        <ul class="detail-list">
+                            <li>Collaborated with a 17-member executive board to optimize event logistics and marketing strategy[cite: 2].</li>
+                            <li>Engaged directly with student attendees to boost participation and operational efficiency[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-dog title-icon"></i>
+                            <div>
+                                <h3>AKPsi Service Dog Toy Drive</h3>
+                                <span class="tag">Alpha Kappa Psi</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Organized a chapter-wide community service initiative focused on gathering essential supplies and toys to support local service dog training programs[cite: 2].</p>
+                        <ul class="detail-list">
+                            <li>Mobilized 60+ fraternity members to drive donations and community outreach[cite: 2].</li>
+                            <li>Applied organizational tools to manage contribution tracking and drive logistics[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Contact Section -->
+        <section id="contact" class="tab-content">
+            <div class="section-header text-center">
+                <h2>Get in Touch</h2>
+                <p>Connect for Sales & Trading opportunities, campus leadership initiatives, or networking[cite: 2].</p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:cchang1430@gmail.com" class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>cchang1430@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/cchang1430" target="_blank" rel="noopener noreferrer" class="contact-box">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <p>linkedin.com/in/cchang1430</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Popup for Quick Message -->
+    <div id="quickModal" class="modal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3>Send Message</h3>
+            <form id="interactiveForm">
+                <div class="form-field">
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" required placeholder="Your full name">
+                </div>
+                <div class="form-field">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" required placeholder="Your email address">
+                </div>
+                <div class="form-field">
+                    <label for="userMsg">Message</label>
+                    <textarea id="userMsg" rows="3" required placeholder="Write your message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send</button>
+            </form>
+            <div id="modalFeedback" class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
